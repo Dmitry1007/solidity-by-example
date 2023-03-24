@@ -28,4 +28,25 @@ contract Primitives {
     int public maxInt = type(int).max;
 
     address public addr = 0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2;
+
+        /*
+    In Solidity, the data type byte represent a sequence of bytes. 
+    Solidity presents two type of bytes types :
+
+     - fixed-sized byte arrays
+     - dynamically-sized byte arrays.
+     
+     The term bytes in Solidity represents a dynamic array of bytes. 
+     It’s a shorthand for byte[] .
+
+     bytes are represented in hexadecimal format
+     where each byte is represented by two hexadecimal digits
+     For example, the value 0x1234 is a bytes2 array with two bytes: 0x12 and 0x34
+    */
+    bytes1 public bytesOne   = 0xb5;   // [10110101]
+    bytes2 public bytesUno   = 0x79d3; // [01010110]
+    bytes3 public bytesThree = 0x79d3d8;
+    bytes4 public bytesFour  = 0x79d3d883;
+    bytes32 public bytesThirtyTwo = 0x79d3d8832d904592c0bf9818b621522c988bb8b0c05cdc3b15aea1b6e8db0c15;
+    bytes public bytesDefault; // a dynamic array of bytes, which can have a variable length
 }
