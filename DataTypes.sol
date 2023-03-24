@@ -49,4 +49,11 @@ contract Primitives {
     bytes4 public bytesFour  = 0x79d3d883;
     bytes32 public bytesThirtyTwo = 0x79d3d8832d904592c0bf9818b621522c988bb8b0c05cdc3b15aea1b6e8db0c15;
     bytes public bytesDefault; // a dynamic array of bytes, which can have a variable length
+
+    // Default values
+    // Unassigned variables have a default value
+    bool public defaultBoo; // false
+    uint public defaultUint; // 0
+    int public defaultInt; // 0
+    address public defaultAddr; // 0x0000000000000000000000000000000000000000
 }
