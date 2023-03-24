@@ -56,4 +56,12 @@ contract Primitives {
     uint public defaultUint; // 0
     int public defaultInt; // 0
     address public defaultAddr; // 0x0000000000000000000000000000000000000000
+
+    function getBalance() public view returns (uint256) {
+        return addr.balance;
+    }
+
+    function getBalanceInEth() public view returns (uint256) {
+        return addr.balance / 10**18;
+    }
 }
