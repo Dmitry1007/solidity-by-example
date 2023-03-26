@@ -2,18 +2,18 @@
 pragma solidity ^0.8.17;
 
 contract Mapping {
-    mapping(address => uint) public myMap;
+    mapping(address => uint) public balances;
 
     function set(address addr, uint num) public {
-        myMap[addr] = num;
+        balances[addr] = num;
     }
 
     function get(address addr) public view returns(uint) {
-        return myMap[addr];
+        return balances[addr];
     }
 
     function remove(address addr) public {
-        delete myMap[addr];
+        delete balances[addr];
     }
 }
 
