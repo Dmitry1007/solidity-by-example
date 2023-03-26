@@ -10,7 +10,7 @@ contract Variables {
         // Local variables are not saved to the blockchain.
         uint i = 456;
 
-        // gloval variables
+        // global variables
         uint timeStamp = block.timestamp;
         address sender = msg.sender;
         
