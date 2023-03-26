@@ -4,7 +4,9 @@ pragma solidity ^0.8.17;
 import "hardhat/console.sol";
 
 contract Loop {
-    function loop() public view {
+
+    // More loops means more gas
+    function loop() external view {
         // for loop
         for (uint i = 0; i < 10; i++) {
             console.log(i);
@@ -23,6 +25,7 @@ contract Loop {
         // while loop
         uint j;
         while (j < 10) {
+            console.log(j, "is less than 10");
             j++;
         }
     }
