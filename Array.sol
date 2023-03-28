@@ -46,10 +46,10 @@ contract Array {
         arr.pop();
     }
 
-    function test() external {
+    function removeByShiftingTest() external {
         arr = [1, 2, 3, 4, 5];
-        remove(2);
-        // [1, 2, 4, 5]
+        removeByShifting(2);
+        // expect [1, 2, 4, 5]
         assert(arr[0] == 1);
         assert(arr[1] == 2);
         assert(arr[2] == 4);
@@ -57,13 +57,24 @@ contract Array {
         assert(arr.length == 4);
 
         arr = [1];
-        remove(0);
+        removeByShifting(0);
         // []
         assert(arr.length == 0);
     }
 
-    function arrayReplacefromEnd(uint index) public {
+
+    function replaceFromEnd(uint index) public {
         arr[index] = arr[arr.length - 1];
         arr.pop();
+    }
+
+    function replaceFromEndTest() public {
+        arr = [1, 2, 3, 4, 5];
+        replaceFromEnd(2);
+        // expect [1, 2, 4, 5]
+        assert(arr[0] == 1);
+        assert(arr[1] == 2);
+        assert(arr[2] == 4);
+        assert(arr[2] == 5);
     }
 }
