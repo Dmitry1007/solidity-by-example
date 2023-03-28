@@ -61,4 +61,9 @@ contract Array {
         // []
         assert(arr.length == 0);
     }
+
+    function arrayReplacefromEnd(uint index) public {
+        arr[index] = arr[arr.length - 1];
+        arr.pop();
+    }
 }
