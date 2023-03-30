@@ -15,4 +15,8 @@ contract Enum {
     function getStatus() public view returns (Status) {
         return s_status;
     }
+
+    function setStatus(Status status) public {
+        s_status = status;
+    }
 }
