@@ -19,4 +19,16 @@ contract Enum {
     function setStatus(Status status) public {
         s_status = status;
     }
+
+    function cancel() public {
+        s_status = Status.Canceled;
+    }
+
+    function shipped() public {
+        s_status = Status.Shipped;
+    }
+
+    function reset() public {
+        delete s_status;
+    }
 }
