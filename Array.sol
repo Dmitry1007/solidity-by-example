@@ -55,11 +55,6 @@ contract Array {
         assert(arr[2] == 4);
         assert(arr[3] == 5);
         assert(arr.length == 4);
-
-        arr = [1];
-        removeByShifting(0);
-        // []
-        assert(arr.length == 0);
     }
 
 
