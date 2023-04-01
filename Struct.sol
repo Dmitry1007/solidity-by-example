@@ -19,4 +19,12 @@ contract Todos {
         todo.text = _text;
         todos.push(todo);
     }
+
+    function update(uint _index, string calldata _text) public {
+        // todos[_index].text = _text;
+        // todos[_index].completed = true;
+        // OR
+        Todo storage todo = todos[_index];
+        todo.text = _text;
+    }
 }
