@@ -5,15 +5,16 @@ contract Todos {
     struct Todo {
         string text;
         bool completed;
+        address owner;
     }
 
     Todo[] public todos;
 
     function create(string calldata _text) public {
         // 3 ways to initialize a struct
-        todos.push(Todo(_text, false));
+        todos.push(Todo(_text, false, msg.sender));
         
-        todos.push(Todo({ text: _text, completed: false}));
+        todos.push(Todo({ text: _text, completed: false, owner: msg.sender}));
 
         Todo memory todo;
         todo.text = _text;
